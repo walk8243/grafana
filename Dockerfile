@@ -22,6 +22,7 @@ RUN rm *.rpm *.tar.gz
 
 WORKDIR /root
 COPY start.sh .
+COPY grafana-datasource.yaml /etc/grafana/provisioning/datasources/prometheus.yaml
 COPY prometheus.yml .
 COPY telegraf.conf /etc/telegraf/telegraf.conf
 
